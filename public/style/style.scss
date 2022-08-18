@@ -1,0 +1,267 @@
+@import "grid";
+@import "media";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+}
+button {
+  padding: 9px 15px 9px 5px;
+  font-size: 15px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  i {
+    margin-right: 10px;
+  }
+}
+button:hover {
+  background-color: #cfcece;
+  color: black;
+}
+form {
+  margin-bottom: 30px;
+  label {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 15px;
+    i {
+      font-size: 15px;
+      margin-right: 4px;
+    }
+  }
+  input {
+    margin-bottom: 17px;
+    border: 1px solid #cfcece;
+    padding: 9px 14px;
+    font-size: 17px;
+    width: 100%;
+  }
+}
+.error{
+  color: red;
+  margin-bottom: 10px;
+}
+.navbar {
+  display: none;
+}
+#sidebar {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  background-color: #f1f1f1 !important;
+  border-left: 1px solid #cfcece;
+  .wrapper {
+    padding: 30px 25px 0px 10px !important;
+  }
+  .fa-xmark {
+    display: none;
+  }
+  h3 {
+    font-size: 30px;
+    padding-right: 40px;
+    font-weight: lighter;
+    line-height: 50px;
+    sub {
+      font-size: 35px;
+    }
+  }
+  span {
+    display: inline-block;
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
+  button {
+    width: 100% !important;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 15px;
+    padding: 17px 10px;
+    i {
+      margin-right: 4px;
+    }
+  }
+  a:hover {
+    background-color: #cfcece;
+  }
+}
+
+.main {
+  margin-left: 260px;
+  padding: 20px 0px;
+  border-right: 1px solid #cfcece;
+  h2 {
+    padding: 0px 15px;
+    color: #4caf50;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+  }
+  .images {
+    margin-bottom: 30px;
+    #image-main {
+      padding: 0px 15px;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 5px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      p {
+        background-color: black;
+        color: white;
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        font-size: 15px;
+        padding: 15px 10px;
+      }
+    }
+    .image {
+      position: relative;
+      padding: 0px 15px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        display: block;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.521);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .overlay:hover {
+        background-color: rgba(255, 255, 255, 0);
+      }
+    }
+    .active {
+      .overlay {
+        display: none !important;
+      }
+    }
+  }
+  hr {
+    padding: 0px 15px;
+
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  #amenities,
+  #space {
+    padding: 0px 15px;
+
+    margin-bottom: 20px;
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      i {
+        width: 30px;
+        text-align: start;
+      }
+      sub {
+        font-size: 22px;
+      }
+    }
+  }
+  #extraInfo,
+  #rules {
+    padding: 0px 15px;
+
+    margin-bottom: 20px;
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 30%;
+    }
+  }
+  #contact {
+    padding: 0px 15px;
+
+    h4 {
+      font-size: 35px;
+    }
+    .contanctInfo {
+      margin-bottom: 20px;
+      p {
+        font-size: 15px;
+        margin-bottom: 8px;
+        i {
+          width: 20px;
+          text-align: start;
+        }
+      }
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+  }
+}
+#subscribe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 4;
+  .wrapper {
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    padding: 30px 60px;
+    position: absolute;
+    top: 80px;
+    i {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 40px;
+    }
+    p {
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.d-none {
+  display: none !important;
+}
