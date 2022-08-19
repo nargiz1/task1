@@ -20,11 +20,11 @@ for (let btn of closeBtns) {
     document.getElementById("page-overlay").style.display = "none";
   });
 }
-navbar.addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("page-overlay").style.display = "block";
-  document.getElementById("sidebar").style.display = "block";
-});
+// navbar.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   document.getElementById("page-overlay").style.display = "block";
+//   document.getElementById("sidebar").style.display = "block";
+// });
 for (let image of images) {
   image.addEventListener("click", function (e) {
     e.preventDefault();
@@ -86,10 +86,10 @@ for (let form of forms) {
           this.insertBefore(errorElement, child.nextElementSibling);
           result = false;
         }
-        if(result === true){
-          alert("submitted")
-        }
       }
+    }
+    if(result === true){
+      alert("submitted")
     }
   });
 }

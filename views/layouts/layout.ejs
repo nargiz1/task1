@@ -1,16 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smth</title>
-</head>
-<body>
-    SMth
-    <br>
-        <%- body -%>
-    <br>
-    After
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/0756c55a68.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <nav class="navbar">
+      <h2>Rental</h2>
+      <i class="fa-solid fa-bars" id="navbarBtn"></i>
+    </nav>
+    <nav id="sidebar">
+      <div class="wrapper">
+        <i class="fa-solid fa-xmark"></i>
+        <h3>Rental from $<sub>99</sub></h3>
+        <span>per night</span>
+        <form action="submit">
+          <label for="dateIn"
+            ><i class="bi bi-calendar-check"></i>Check In</label
+          >
+          <input
+            type="text"
+            name="dateIn"
+            id="dateIn"
+            placeholder="DD MM YYYY"
+          />
+
+          <label for="dateOut"><i class="bi bi-calendar"></i>Check Out</label>
+          <input
+            type="text"
+            name="dateOut"
+            id="dateOut "
+            placeholder="DD MM YYYY"
+          />
+
+          <label for="adults"><i class="fa-solid fa-person"></i>Adults</label>
+          <input type="number" value="1" name="adults" id="adults" />
+
+          <label for="kids"><i class="fa-solid fa-children"></i>Kids</label>
+          <input type="number" value="0" min="0" name="kids" id="kids" />
+
+          <button><i class="bi bi-search"></i>Search availability</button>
+        </form>
+      </div>
+      <div>
+        <a href="#"><i class="bi bi-house-fill"></i>Apartment</a>
+        <a href="#" class="subscribeBtn"><i class="bi bi-rss"></i>Subscribe</a>
+        <a href="#contact"><i class="bi bi-envelope-fill"></i>Contact</a>
+      </div>
+    </nav>
+    <div id="page-overlay"></div> -->
+    <%- body -%>
+
+    <div id="subscribe">
+      <div class="wrapper">
+        <i class="fa-solid fa-xmark"></i>
+        <h2>SUBSCRIBE</h2>
+        <p>
+          Join our mailing list to receive updates on available dates and
+          special offers.
+        </p>
+        <form action="submit">
+          <input type="text" name="email" placeholder="Enter e-mail" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
