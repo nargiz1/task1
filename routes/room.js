@@ -47,11 +47,9 @@ router.post("/", upload.single('image'), async (req, res) => {
     try{
         const newRoom = await room.save()
         res.redirect('/room')
-        // alert("Created")
     }catch{
         res.send('Error')
     }
-  
 });
 
 module.exports = router;
