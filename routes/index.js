@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     })
     console.log(apartment)
     res.render('index', {
-        apartment: apartment,
+        apartment: apartment[0],
         rooms: rooms
     })
 })

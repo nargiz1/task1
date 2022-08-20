@@ -1,5 +1,5 @@
 <div class="main">
-  <h2><%= apartment[0].name %></h2>
+  <h2><%= apartment.name %></h2>
   <div class="images">
     <div id="image-main">
       <img src="<%= rooms[0].imagePath %>" alt="" />
@@ -29,24 +29,24 @@
       <div class="col-6">
         <p>
           <i class="fa-solid fa-person"></i> Max people: <%=
-          apartment[0].maxPeople %>
+          apartment.maxPeople %>
         </p>
         <p>
-          <i class="fa-solid fa-bath"></i> Bathrooms: <%= apartment[0].bathrooms
+          <i class="fa-solid fa-bath"></i> Bathrooms: <%= apartment.bathrooms
           %>
         </p>
         <p>
-          <i class="fa-solid fa-bed"></i> Bedrooms: <%= apartment[0].bedrooms %>
+          <i class="fa-solid fa-bed"></i> Bedrooms: <%= apartment.bedrooms %>
         </p>
       </div>
       <div class="col-6">
         <p>
           <i class="fa-solid fa-clock"></i> Check In:
-          <sub><%= apartment[0].checkIn %> </sub>
+          <sub><%= apartment.checkIn %> </sub>
         </p>
         <p>
           <i class="fa-solid fa-clock"></i> Check Out:
-          <sub><%= apartment[0].checkOut %> </sub>
+          <sub><%= apartment.checkOut %> </sub>
         </p>
       </div>
     </div>
@@ -56,20 +56,20 @@
     <h4>Amenities</h4>
     <div class="row">
       <div class="col-6">
-        <% if(apartment[0].shower) {%>
+        <% if(apartment.shower) {%>
         <p><i class="fa-solid fa-shower"></i> Shower</p>
-        <%}%> <% if(apartment[0].wifi) {%>
+        <%}%> <% if(apartment.wifi) {%>
         <p><i class="fa-solid fa-wifi"></i> WiFi</p>
-        <%}%> <% if(apartment[0].tv) {%>
+        <%}%> <% if(apartment.tv) {%>
         <p><i class="fa-solid fa-tv"></i> TV</p>
         <%}%>
       </div>
       <div class="col-6">
-        <% if(apartment[0].kitchen) {%>
+        <% if(apartment.kitchen) {%>
         <p><i class="fa-solid fa-utensils"></i> Kitchen</p>
-        <%}%> <% if(apartment[0].heating) {%>
+        <%}%> <% if(apartment.heating) {%>
         <p><i class="fa-solid fa-temperature-three-quarters"></i> Heating</p>
-        <%}%> <% if(apartment[0].accessible) {%>
+        <%}%> <% if(apartment.accessible) {%>
         <p><i class="fa-solid fa-wheelchair"></i> Accessible</p>
         <%}%>
       </div>
@@ -79,7 +79,7 @@
   <div id="extraInfo">
     <h4>Extra Info</h4>
     <p>
-      <%= apartment[0].extraInfo  %> 
+      <%= apartment.extraInfo  %> 
     </p>
     <p>
       We accept:
@@ -93,7 +93,7 @@
   <div id="rules">
     <h4>Rules</h4>
     <p>
-      <%= apartment[0].rules  %> 
+      <%= apartment.rules  %> 
     </p>
     <p>Subscribe to receive updates on available dates and special offers.</p>
     <button class="subscribeBtn">Subscribe</button>
