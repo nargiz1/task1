@@ -322,10 +322,6 @@ form input {
   width: 30px;
   text-align: start;
 }
-.main #amenities p sub,
-.main #space p sub {
-  font-size: 22px;
-}
 .main #extraInfo,
 .main #rules {
   padding: 0px 15px;
