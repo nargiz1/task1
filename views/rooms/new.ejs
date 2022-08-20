@@ -1,16 +1,18 @@
-<h1 style="text-align: center ;">New Room</h1>
-<form action="/room" method="POST" enctype="multipart/form-data">
-    <input type="text" name="name">
-    <select name="apartment" id="">
-    <% apartments.forEach(apartment => { %>
-        <% if(apartment.id === room?.apartment?.id) {%> 
-            <option selected value="<%= apartment.id %>" label="<%= apartment.name %>" >
-        <% } else{ %>
-            <option value="<%= apartment.id %> " label=" <%= apartment.name %> " >
-       <% } %> 
-    <% }) %> 
-    </select>
-    <input type="file" name="image">
-    <a href="/room">Cancel</a>
-    <button type="submit">Create</button>
-</form>
+<div class="main">
+    <h1 style="text-align: center ;">New Room</h1>
+    <form action="/room" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name">
+        <select name="apartment" id="">
+        <% apartments.forEach(apartment => { %>
+            <% if(apartment.id === room?.apartment?.id) {%> 
+                <option selected value="<%= apartment.id %>" label="<%= apartment.name %>" >
+            <% } else{ %>
+                <option value="<%= apartment.id %> " label=" <%= apartment.name %> " >
+        <% } %> 
+        <% }) %> 
+        </select>
+        <input type="file" name="image">
+        <a href="/room">Cancel</a>
+        <button type="submit">Create</button>
+    </form>
+</div>

@@ -400,4 +400,8 @@ form input {
 
 .d-none {
   display: none !important;
+}
+
+.messageText {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

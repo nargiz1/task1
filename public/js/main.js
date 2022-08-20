@@ -51,7 +51,6 @@ for (let form of forms) {
     let inputs = this.querySelectorAll("input");
     for (let child of inputs) {
       if (isEmpty(child.value) === false) {
-        console.log("here");
         if (child.name.includes("date")) {
           if (!isValidDate(child.value)) {
             let errorElement = document.createElement("p");
@@ -88,7 +87,9 @@ for (let form of forms) {
       }
     }
     if (result === true) {
-      alert("submitted");
+      const text = this.querySelector(".messageText").innerText
+      alert(text);
+      inputs.forEach(input=> input.value="")
     }
   });
 }

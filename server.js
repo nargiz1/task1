@@ -31,8 +31,6 @@ db.once('open', () => console.log("Connected"))
 
 
 app.use('/', indexRouter)
-app.use('/test', testRouter)
-app.use('/book', bookRouter)
 app.use('/apartment', apartmentRouter)
 app.use('/room', roomRouter)
 
