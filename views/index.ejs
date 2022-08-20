@@ -1,48 +1,53 @@
 <div class="main">
-  <h2>The Apartment</h2>
+  <h2><%= apartment[0].name %></h2>
   <div class="images">
     <div id="image-main">
-      <img src="images/livingRoom.jpg" alt="" />
-      <p>Living Room</p>
+      <img src="<%= rooms[0].imagePath %>" alt="" />
+      <p><%= rooms[0].name %></p>
     </div>
     <div class="row">
-      <div class="col-3">
-        <div class="image">
-          <div class="overlay"></div>
-          <img src="images/diningRoom.jpg" alt="" name="Dining Room" />
-        </div>
-      </div>
+      <% rooms.forEach(room => { %> <% if(rooms.indexOf(room) === 0){%>
       <div class="col-3 active">
         <div class="image">
           <div class="overlay"></div>
-          <img src="images/livingRoom.jpg" alt="" name="Living Room" />
+          <img src="<%= room.imagePath %>" alt="" name="<%= room.name %>  " />
         </div>
       </div>
+      <%}else{%>
       <div class="col-3">
         <div class="image">
           <div class="overlay"></div>
-          <img src="images/livingRoom2.jpg" alt="" name="Living Room 2" />
+          <img src="<%= room.imagePath %>" alt="" name="<%= room.name %>  " />
         </div>
       </div>
-      <div class="col-3">
-        <div class="image">
-          <div class="overlay"></div>
-          <img src="images/bedroom.jpg" alt="" name="Bedroom" />
-        </div>
-      </div>
+      <%} %> <% }) %>
     </div>
   </div>
   <div id="space">
     <h4>The Space</h4>
     <div class="row">
       <div class="col-6">
-        <p><i class="fa-solid fa-person"></i> Max people: 4</p>
-        <p><i class="fa-solid fa-bath"></i> Bathrooms: 2</p>
-        <p><i class="fa-solid fa-bed"></i> Bedrooms: 1</p>
+        <p>
+          <i class="fa-solid fa-person"></i> Max people: <%=
+          apartment[0].maxPeople %>
+        </p>
+        <p>
+          <i class="fa-solid fa-bath"></i> Bathrooms: <%= apartment[0].bathrooms
+          %>
+        </p>
+        <p>
+          <i class="fa-solid fa-bed"></i> Bedrooms: <%= apartment[0].bedrooms %>
+        </p>
       </div>
       <div class="col-6">
-        <p><i class="fa-solid fa-clock"></i> Check In: After <sub>3</sub>PM</p>
-        <p><i class="fa-solid fa-clock"></i> Check Out: <sub>12</sub>PM</p>
+        <p>
+          <i class="fa-solid fa-clock"></i> Check In:
+          <sub><%= apartment[0].checkIn %> </sub>
+        </p>
+        <p>
+          <i class="fa-solid fa-clock"></i> Check Out:
+          <sub><%= apartment[0].checkOut %> </sub>
+        </p>
       </div>
     </div>
   </div>
@@ -51,14 +56,22 @@
     <h4>Amenities</h4>
     <div class="row">
       <div class="col-6">
+        <% if(apartment[0].shower) {%>
         <p><i class="fa-solid fa-shower"></i> Shower</p>
+        <%}%> <% if(apartment[0].wifi) {%>
         <p><i class="fa-solid fa-wifi"></i> WiFi</p>
+        <%}%> <% if(apartment[0].tv) {%>
         <p><i class="fa-solid fa-tv"></i> TV</p>
+        <%}%>
       </div>
       <div class="col-6">
+        <% if(apartment[0].kitchen) {%>
         <p><i class="fa-solid fa-utensils"></i> Kitchen</p>
+        <%}%> <% if(apartment[0].heating) {%>
         <p><i class="fa-solid fa-temperature-three-quarters"></i> Heating</p>
+        <%}%> <% if(apartment[0].accessible) {%>
         <p><i class="fa-solid fa-wheelchair"></i> Accessible</p>
+        <%}%>
       </div>
     </div>
   </div>
@@ -66,11 +79,7 @@
   <div id="extraInfo">
     <h4>Extra Info</h4>
     <p>
-      Our apartment is really clean and we like to keep it that way. Enjoy the
-      lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      <%= apartment[0].extraInfo  %> 
     </p>
     <p>
       We accept:
@@ -84,10 +93,7 @@
   <div id="rules">
     <h4>Rules</h4>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      <%= apartment[0].rules  %> 
     </p>
     <p>Subscribe to receive updates on available dates and special offers.</p>
     <button class="subscribeBtn">Subscribe</button>

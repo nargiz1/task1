@@ -1,0 +1,32 @@
+<h1 style="text-align: center">New Apartment</h1>
+<form action="/apartment" method="POST">
+  <input type="text" name="name" placeholder="name"/>
+  <input type="number" name="maxPeople" placeholder="maxPeople"/>
+  <input type="number" name="bathrooms" placeholder="bathrooms"/>
+  <input type="number" name="bedrooms" placeholder="bedrooms"/>
+  <input type="text" name="checkIn" placeholder="checkIn"/>
+  <input type="text" name="checkOut" placeholder="checkOut"/>
+  <br>
+  <label for="shower"> Shower</label>
+  <input type="checkbox" id="shower" name="shower" value="true"/>
+  <br>
+  <label for="wifi"> wifi</label>
+  <input type="checkbox" id="wifi" name="wifi" value="true"/>
+  <br>
+  <label for="tv"> tv</label>
+  <input type="checkbox" id="tv" name="tv" value="true"/>
+  <br>
+  <label for="kitchen"> kitchen</label>
+  <input type="checkbox" id="kitchen" name="kitchen" value="true"/>
+  <br>
+  <label for="heating"> heating</label>
+  <input type="checkbox" id="heating" name="heating" value="true"/>
+  <br>
+  <label for="accessible"> accessible</label>
+  <input type="checkbox" id="accessible" name="accessible" value="true"/>
+  <textarea name="extraInfo" id="extraInfo" cols="30" rows="10" placeholder="extraInfo"></textarea>
+  <textarea name="rules" id="extraInfo" cols="30" rows="10" placeholder="rules"></textarea>
+
+  <a href="/apartment">Cancel</a>
+  <button type="submit">Create</button>
+</form>

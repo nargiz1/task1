@@ -9,6 +9,10 @@ const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
 const testRouter = require('./routes/test')
+const bookRouter = require('./routes/book')
+const apartmentRouter = require('./routes/apartment')
+const roomRouter = require('./routes/room')
+
 
 
 app.set('view engine', 'ejs')
@@ -16,7 +20,7 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static(__dirname +'/public'))
-app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
+app.use(bodyParser.urlencoded({limit: '100000mb', extended: false}))
 
 const mongoose = require('mongoose')
 mongoose.connect((process.env.DATABASE_URL), {
@@ -28,5 +32,8 @@ db.once('open', () => console.log("Connected"))
 
 app.use('/', indexRouter)
 app.use('/test', testRouter)
+app.use('/book', bookRouter)
+app.use('/apartment', apartmentRouter)
+app.use('/room', roomRouter)
 
 app.listen(process.env.PORT || 3000)

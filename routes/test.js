@@ -6,7 +6,6 @@ const Test = require("../models/test");
 router.get("/", async (req, res) => {
     try{
         const tests = await Test.find({})
-        console.log(tests)
         res.render("tests/index", {tests: tests});
     }catch{
         res.redirect('/')
@@ -25,8 +24,6 @@ router.post("/", async (req, res) => {
   try {
     const newTest = await test.save()
     res.redirect('/test')
-
-
   } catch {
     res.render("tests/new", {
       test: test,

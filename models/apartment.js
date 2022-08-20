@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 
 const apartmentSchema = mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
     maxPeople: {
         type: Number,
         required: true
@@ -54,3 +58,5 @@ const apartmentSchema = mongoose.Schema({
         required: true
     }
 })
+
+module.exports = mongoose.model('Apartment', apartmentSchema)
