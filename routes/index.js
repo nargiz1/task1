@@ -4,15 +4,14 @@ const Apartment = require('../models/apartment')
 const Room = require('../models/room')
 
 router.get('/', async (req, res) => {
-    const apartment = await Apartment.find({
-        _id: "62fff917e16dba583f6f2d9d"
-    })
+    const apartments = await Apartment.find({})
+    const apartment = apartments[0]
     const rooms = await Room.find({
-        apartment: "62fff917e16dba583f6f2d9d"
+        apartment: apartment.id
     })
     console.log(apartment)
     res.render('index', {
-        apartment: apartment[0],
+        apartment: apartment,
         rooms: rooms
     })
 })
