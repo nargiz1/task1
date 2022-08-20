@@ -8,8 +8,6 @@ const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
-const testRouter = require('./routes/test')
-const bookRouter = require('./routes/book')
 const apartmentRouter = require('./routes/apartment')
 const roomRouter = require('./routes/room')
 
